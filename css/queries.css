@@ -364,6 +364,9 @@
     .rsvp {
         padding-top: 20px;
     }
-
+    
+.hero{
+  background-position: center top !important;
+}
 
 }
