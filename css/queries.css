@@ -363,4 +363,9 @@
     .rsvp {
         padding-top: 20px;
     }
+    /* Nudge the video overlay up a bit without breaking responsive positioning */
+#video-content{
+  transform: translateY(-50px);
+}
+
 }
