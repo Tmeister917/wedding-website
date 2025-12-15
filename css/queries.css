@@ -290,6 +290,11 @@
     }
 
 }
+/* Nudge the video overlay up on desktop */
+#video-content{
+  transform: translateY(-50px) !important;
+}
+
 
 @media screen and (max-width: 480px) {
     .hero .hero-content {
@@ -363,9 +368,6 @@
     .rsvp {
         padding-top: 20px;
     }
-    /* Nudge the video overlay up a bit without breaking responsive positioning */
-#video-content{
-  transform: translateY(-50px);
-}
+
 
 }
