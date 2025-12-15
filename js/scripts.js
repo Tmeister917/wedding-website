@@ -215,7 +215,7 @@ $('#rsvp-form').on('submit', function (e) {
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         // Single invite code: 120926
-        if (MD5($('#invite_code').val()) !== 'c8f93c4b1f8e0c73c2f6b7cf6dfd9f5c') {
+        if (MD5($('#invite_code').val()) !== '894f2c736075c519dbe099240d339277') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
 
