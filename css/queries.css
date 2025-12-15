@@ -290,10 +290,6 @@
     }
 
 }
-/* Nudge the video overlay up on desktop */
-#video-content{
-  transform: translateY(-50px) !important;
-}
 
 
 @media screen and (max-width: 480px) {
