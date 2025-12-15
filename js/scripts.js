@@ -214,10 +214,11 @@ $('#rsvp-form').on('submit', function (e) {
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-    // Single invite code: EPITHEO
-    if (MD5($('#invite_code').val()) !== '5f8c9a1b6d4a9f58a5f71e6c2b5a0f5b') {
+    // Single invite code: 091226 (Sept 12, 2026)
+    if (MD5($('#invite_code').val()) !== '6425d7ec0ba71c57b4f69a3e65b50c5f') {
         $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
     } else {
+
         $.post('https://script.google.com/macros/s/AKfycbz8_K8JMpYcNnbG6hyjIcPepIQfPbz--Sir7C4p8M9-zPmS5DTQcPJEwa7DlGvKoMCM2Q/exec', data)
             .done(function (data) {
                 console.log(data);
