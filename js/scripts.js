@@ -214,10 +214,10 @@ $('#rsvp-form').on('submit', function (e) {
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-    // Single invite code: 091226 (Sept 12, 2026)
-    if (MD5($('#invite_code').val()) !== '6425d7ec0ba71c57b4f69a3e65b50c5f') {
-        $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-    } else {
+        // Single invite code: 120926
+        if (MD5($('#invite_code').val()) !== 'c8f93c4b1f8e0c73c2f6b7cf6dfd9f5c') {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        } else {
 
         $.post('https://script.google.com/macros/s/AKfycbz8_K8JMpYcNnbG6hyjIcPepIQfPbz--Sir7C4p8M9-zPmS5DTQcPJEwa7DlGvKoMCM2Q/exec', data)
             .done(function (data) {
