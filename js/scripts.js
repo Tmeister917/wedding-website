@@ -219,7 +219,7 @@ $('#rsvp-form').on('submit', function (e) {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
 
-        $.post('https://script.google.com/macros/s/AKfycbz8_K8JMpYcNnbG6hyjIcPepIQfPbz--Sir7C4p8M9-zPmS5DTQcPJEwa7DlGvKoMCM2Q/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbyDypyW39wgufOzQi3ySdC9II8rKyliIKWXtbRUpZJj-eIm6IcVg4MxkFoI5pdiV1bcOA/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
