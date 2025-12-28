@@ -438,7 +438,16 @@
 
 #rsvp .rsvp-icon i.fa { display: block; line-height: 1; }
 
+/* RSVP: visually nudge most FA glyphs slightly left */
+#rsvp .rsvp-icon i.fa {
+  display: block;
+  line-height: 1;
+  position: relative;
+  left: -2px; /* try -1px or -2px */
+}
+
+/* Keep bed + cutlery centered (override the nudge) */
 #rsvp .rsvp-icon i.fa-cutlery,
 #rsvp .rsvp-icon i.fa-bed {
-  left: 2px;   /* or 2px depending on what you see */
+  left: 0;
 }
