@@ -421,3 +421,10 @@
 
 
 
+/* RSVP: remove the template's old divider line (drawn by i:after) */
+#rsvp .rsvp-form .form-input-group i:after,
+#rsvp .rsvp-form .form-input-group i::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}
