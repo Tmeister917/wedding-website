@@ -414,19 +414,6 @@
   line-height: 1;
 }
 
-/* Match the divider (bar) style used by the existing RSVP fields */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
-  border-right: 1px solid #e6e6e6; /* if still slightly different, try #ededed */
-  box-sizing: border-box;
-}
-
-/* Ensure text starts after the icon slot + divider (match the other fields) */
-#rsvp #allergies,
-#rsvp #lodging {
-  padding-left: 80px !important; /* if too far/close, try 75px or 78px */
-}
-
 
 /* Nudge ONLY the new fields' placeholder/text to match existing inputs */
 #rsvp #allergies,
@@ -436,4 +423,16 @@
   line-height: normal !important;
 }
 
+/* RSVP: shrink ONLY the bed glyph so it doesn't overlap the existing divider */
+#rsvp .fa-bed:before {
+  display: inline-block;
+  transform: scale(0.85);       /* tweak 0.80–0.95 */
+  transform-origin: center;
+}
+
+#rsvp .fa-cutlery:before {
+  display: inline-block;
+  transform: scale(0.90);
+  transform-origin: center;
+}
 
