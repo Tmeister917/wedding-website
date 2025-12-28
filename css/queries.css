@@ -405,7 +405,7 @@
   min-width: 0;
   width: auto !important;
   box-sizing: border-box;
-  padding-left: 18px !important;
+  padding-left: 18px !important;s
 
   border-left: 0 !important; /* prevents an extra divider from the template */
 }
@@ -428,3 +428,16 @@
   display: none !important;
   border: 0 !important;
 }
+
+/* RSVP: center icons consistently (Font Awesome fixed-width) */
+#rsvp .rsvp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rsvp .rsvp-icon i.fa {
+  display: block;
+  line-height: 1;
+}
+
