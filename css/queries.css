@@ -436,13 +436,7 @@
   justify-content: center;
 }
 
-#rsvp .rsvp-icon i.fa {
-  display: block;
-  line-height: 1;
+#rsvp .rsvp-icon i.fa-cutlery,
+#rsvp .rsvp-icon i.fa-bed {
+  left: 2px;   /* or 2px depending on what you see */
 }
-/* RSVP: visually center FA glyphs (they're font-based, not true-centered) */
-#rsvp .rsvp-icon i.fa {
-  position: relative;
-  left: 1px;   /* try 1px, then 2px if needed */
-}
-
