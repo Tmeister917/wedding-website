@@ -430,22 +430,36 @@
   position: absolute;              /* keep your icon-slot positioning stable */
 }
 
-/* draw the divider line slightly to the right of where it used to be */
+/* RSVP: shift ONLY the divider line for the two new fields HORIZONTALLY (keep vertical identical) */
+
+/* remove the built-in divider for just these two icons */
+#rsvp .fa-cutlery,
+#rsvp .fa-bed {
+  border-right: 0 !important;
+  position: absolute; /* keep your icon positioning as-is */
+}
+
+/* redraw divider with the same vertical inset as the original inputs */
 #rsvp .fa-cutlery::after,
 #rsvp .fa-bed::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -8px;                     /* <-- tweak this: try -6px to -12px */
+
+  /* vertical match: not full height, same “inset” look as other fields */
+  top: 14px;
+  bottom: 14px;
+
+  /* horizontal shift: move the divider right/left */
+  right: -8px;      /* <-- change this only: -6, -8, -10 etc */
+
   width: 1px;
-  background: #e6e6e6;             /* should match your existing divider */
+  background: #e6e6e6;
 }
 
-/* keep the text starting after the shifted divider (add the same amount as above) */
+/* keep text start aligned with the new divider position */
 #rsvp #allergies,
 #rsvp #lodging {
-  padding-left: 88px !important;   /* <-- if your current looks perfect, this should match the shift */
+  padding-left: 88px !important;  /* adjust to match right shift (usually +8px vs your old) */
 }
 
 
