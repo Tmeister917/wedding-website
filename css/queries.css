@@ -369,47 +369,34 @@
 }
 
 
-/* =========================================================
-   RSVP: make ALL fields use the same divider + spacing
-   Scoped to #rsvp only
-   ========================================================= */
-
-/* spacing so the button doesn't overlap row 3 */
+/* RSVP: fix ONLY the two new icons + their divider height */
 #rsvp .form-input-group {
-  margin-bottom: 16px;
-}
-
-/* breathing room above the button */
-#rsvp .rsvp-btn {
-  margin-top: 20px !important;
-}
-
-/* 1) Remove the template divider (border-right on the icon) for ALL RSVP fields */
-#rsvp .form-input-group i {
-  border-right: 0 !important;
-  position: relative; /* anchor for ::after */
-}
-
-/* 2) Draw ONE consistent divider for ALL RSVP fields */
-#rsvp .form-input-group i::after {
-  content: "";
-  position: absolute;
-
-  /* match the inset look from the original fields */
-  top: 14px;
-  bottom: 14px;
-
-  /* place the divider at the same spot for every field */
-  right: -8px;       /* tweak -6/-8/-10 if you want */
-  width: 1px;
-
-  background: #e6e6e6;
-  pointer-events: none;
-}
-
-/* 3) Fix the two wide glyphs so they don't collide with the divider */
-#rsvp i.fa-bed:before,
-#rsvp i.fa-cutlery:before {
   position: relative;
-  left: -4px;        /* tweak -2/-4/-6 */
+}
+
+/* Target only the new icons */
+#rsvp .fa-cutlery,
+#rsvp .fa-bed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;            /* makes the divider/bar span the full input height */
+  width: 60px;             /* icon slot width (matches the template look) */
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  line-height: 1;
+}
+
+/* Match the divider (bar) style used by the existing RSVP fields */
+#rsvp .fa-cutlery,
+#rsvp .fa-bed {
+  border-right: 1px solid #e6e6e6; /* if still slightly different, try #ededed */
+  box-sizing: border-box;
+}
+
+/* Ensure text starts after the icon slot + divider (match the other fields) */
+#rsvp #allergies,
+#rsvp #lodging {
+  padding-left: 80px !important; /* if too far/close, try 75px or 78px */
 }
