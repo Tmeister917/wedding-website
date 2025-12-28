@@ -368,3 +368,24 @@
 
 }
 
+/* =========================================================
+   RSVP: fix overlap after adding Allergies + Lodging fields
+   Scoped to #rsvp only (no global changes)
+   ========================================================= */
+
+#rsvp .form-input-group {
+  margin-bottom: 16px;
+}
+
+#rsvp .rsvp-btn {
+  margin-top: 16px !important;   /* stops the button from riding up into inputs */
+  position: static !important;   /* cancels any weird positioning from template */
+  display: block;
+  width: 100%;
+}
+
+/* Safety: if the template uses a negative margin on the submit area wrapper */
+#rsvp form.rsvp-form {
+  margin-bottom: 0;
+}
+
