@@ -413,18 +413,18 @@
   width: 100%;
 }
 
-/* RSVP: remove the template's old divider lines */
+/* RSVP: remove the template's old divider lines WITHOUT killing Font Awesome icons */
 #rsvp .rsvp-field .rsvp-icon i {
   border-right: 0 !important;
   box-shadow: none !important;
   background-image: none !important;
 }
 
-/* If the template draws the line via pseudo-elements */
-#rsvp .rsvp-field .rsvp-icon i::before,
-#rsvp .rsvp-field .rsvp-icon i::after,
+/* Only remove pseudo-elements on the wrapper (safe) */
 #rsvp .rsvp-field::before,
-#rsvp .rsvp-field::after {
+#rsvp .rsvp-field::after,
+#rsvp .form-input-group::before,
+#rsvp .form-input-group::after {
   content: none !important;
   display: none !important;
 }
