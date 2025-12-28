@@ -414,7 +414,7 @@
 }
 
 /* RSVP: hide any legacy template icon that might still be rendering */
-#rsvp .form-input-group > i.fa {
+#rsvp .rsvp-field > i.fa {
   display: none !important;
 }
 
