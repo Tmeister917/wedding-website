@@ -369,34 +369,32 @@
 }
 
 
-/* RSVP: fix ONLY the two new icons + their divider height */
+/* =========================================================
+   RSVP: make ALL fields use the same icon slot + full-height divider
+   Scoped to #rsvp only
+   ========================================================= */
+
 #rsvp .form-input-group {
   position: relative;
 }
 
-/* Target only the new icons */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
+/* Apply the same icon-slot styling to ALL RSVP icons */
+#rsvp .form-input-group i.fa {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;            /* makes the divider/bar span the full input height */
-  width: 60px;             /* icon slot width (matches the template look) */
+  width: 60px;             /* icon slot width */
   display: flex;
   align-items: center;     /* vertical centering */
   justify-content: center; /* horizontal centering */
   line-height: 1;
-}
 
-/* Match the divider (bar) style used by the existing RSVP fields */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
-  border-right: 1px solid #e6e6e6; /* if still slightly different, try #ededed */
+  border-right: 1px solid #e6e6e6; /* the divider line */
   box-sizing: border-box;
 }
 
-/* Ensure text starts after the icon slot + divider (match the other fields) */
-#rsvp #allergies,
-#rsvp #lodging {
-  padding-left: 80px !important; /* if too far/close, try 75px or 78px */
+/* Make ALL RSVP inputs start after the icon slot + divider */
+#rsvp .form-input-group input {
+  padding-left: 80px !important;  /* 60px slot + ~20px breathing room */
 }
