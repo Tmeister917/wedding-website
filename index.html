@@ -192,7 +192,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
 
                 <div class="wp4">
-                    <p><strong>Samedi · 12 septembre</strong></p>
+                    <p><strong>Saturday · September 12</strong></p>
 
                     <h5>Lunch at the Château <span class="time">12:30</span></h5>
                     <p>
@@ -220,7 +220,7 @@
                 </div>
 
                 <div class="wp6">
-                    <p><strong>Dimanche · 13 septembre</strong></p>
+                    <p><strong>Sunday · September 13</strong></p>
 
                     <h5>Farewell Brunch <span class="time">11:00</span></h5>
                     <p>
@@ -279,7 +279,7 @@
             <div class="col-md-12 text-center">
                 <h3>A picture is worth a thousand words!</h3>
                 <p>Help us capture the moment, tag your photos with the hashtag
-                    <a href="https://instagram.com/explore/tags/ramandantara/" target="_blank">#EpiphanieAndTheo</a>
+                    <a href="https://instagram.com/explore/tags/EpiphanieAndTheo/" target="_blank">#EpiphanieAndTheo</a>
                 </p>
             </div>
         </div>
@@ -471,77 +471,121 @@
 
 <section class="rsvp text-center" id="rsvp">
 
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+  <!-- RSVP Success Modal -->
+  <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="rsvp-modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 15th of January '26</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                    <div class="form-input-group">
-                        <i class="fa fa-users"></i>
-                        <input type="text"
-                               name="extras"
-                               id="extras"
-                               placeholder="Partner name (Invite Only)">
-                    </div>
-                </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
-            </div>
+          <div class="section-padding">
+            <h3 id="rsvp-modal-title">Thank you!</h3>
+            <p>We can’t wait to celebrate with you.</p>
+            <div id="add-to-cal"></div>
+          </div>
         </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <h3>RSVP</h3>
+        <p>Please reply by <strong>January 15, 2026</strong>.</p>
+
+        <form id="rsvp-form" class="rsvp-form" action="" method="POST" autocomplete="on">
+          <!-- Row 1: Email + Name -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="email"
+                       name="email"
+                       id="email"
+                       placeholder="Email"
+                       required>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text"
+                       name="name"
+                       id="name"
+                       placeholder="Full name"
+                       required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Partner + Invite Code -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <input type="text"
+                       name="extras"
+                       id="extras"
+                       placeholder="Partner name (invite only)">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="number"
+                       name="invite_code"
+                       id="invite_code"
+                       min="0"
+                       placeholder="Invite code"
+                       required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Allergies + Lodging -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                <input type="text"
+                       name="allergies"
+                       id="allergies"
+                       placeholder="Allergies / dietary restrictions">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group">
+                <i class="fa fa-bed" aria-hidden="true"></i>
+                <input type="text"
+                       name="lodging"
+                       id="lodging"
+                       placeholder="Lodging (hotel / on-site / other)">
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerts -->
+          <div class="row">
+            <div class="col-md-12" id="alert-wrapper"></div>
+          </div>
+
+          <button type="submit" class="btn-fill rsvp-btn">
+            Submit RSVP
+          </button>
+        </form>
+
+      </div>
     </div>
+  </div>
 </section>
+
 
 <footer>
     <div class="container">
