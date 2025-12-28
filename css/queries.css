@@ -370,25 +370,19 @@
 
 
 /* =========================================================
-   RSVP: uniform icon slot + full-height divider for ALL fields
-   (NO absolute positioning)
+   RSVP: uniform icon slot + divider for ALL fields (stable)
    ========================================================= */
 
 #rsvp .form-input-group {
   margin-bottom: 16px;
   display: flex;
-  align-items: center;     /* vertical centering */
+  align-items: stretch;     /* lets the divider span full input height */
 }
 
-#rsvp .rsvp-btn {
-  margin-top: 20px !important;
-}
-
-/* Icon slot (all RSVP icons) */
-#rsvp .form-input-group i.fa {
-  flex: 0 0 60px;          /* fixed slot width */
+/* Icon slot */
+#rsvp .form-input-group > i.fa {
+  flex: 0 0 60px;
   width: 60px;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,15 +392,19 @@
   line-height: 1;
 }
 
-/* Input takes remaining space */
-#rsvp .form-input-group input {
-  flex: 1 1 auto;
-  padding-left: 20px !important;  /* text spacing after divider */
+/* Input column (THIS prevents overlap) */
+#rsvp .form-input-group > input {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto !important;          /* overrides template width:100% */
+  box-sizing: border-box;
+
+  padding-left: 20px !important;   /* space from divider */
 }
 
-/* Optional: wide glyphs that can touch the divider */
-#rsvp i.fa-bed:before,
-#rsvp i.fa-cutlery:before {
-  position: relative;
-  left: -4px;
+/* Button spacing */
+#rsvp .rsvp-btn {
+  margin-top: 20px !important;
 }
+
+/* Optional: wide glyphs c*
