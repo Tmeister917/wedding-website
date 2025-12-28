@@ -389,3 +389,17 @@
   margin-bottom: 0;
 }
 
+/* RSVP field alignment: center icons + vertically center placeholder/text */
+#rsvp .form-input-group i {
+  height: 60px;
+  line-height: 60px;
+}
+
+#rsvp .form-input-group input {
+  height: 60px;
+  line-height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
