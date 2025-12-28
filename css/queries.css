@@ -414,12 +414,6 @@
   line-height: 1;
 }
 
-/* RSVP: keep the divider consistent, but move these wider icons left so the bar doesn't cut through */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
-  justify-content: flex-start;  /* instead of centered */
-  padding-left: 50px;           /* tune: 16px–22px if needed */
-}
 
 /* Nudge ONLY the new fields' placeholder/text to match existing inputs */
 #rsvp #allergies,
