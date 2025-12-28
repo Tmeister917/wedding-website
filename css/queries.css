@@ -370,47 +370,38 @@
 
 
 /* =========================================================
-   RSVP (rebuilt fields): centered icons + divider + clean inputs
-   Scoped to #rsvp only
+   RSVP: kill the template's old divider line + true-center icons
    ========================================================= */
 
-/* Each field becomes a 2-column layout: icon slot | input */
-#rsvp .rsvp-field {
-  display: flex;
-  align-items: stretch;      /* divider spans full height */
-  margin-bottom: 16px;
+/* 1) Remove the OLD divider (most templates draw it on the input side) */
+#rsvp .rsvp-field input {
+  border-left: 0 !important;
+  background-image: none !important;
 }
 
-/* Icon slot */
+/* Some templates draw the divider via pseudo-elements */
+#rsvp .form-input-group::before,
+#rsvp .form-input-group::after,
+#rsvp .rsvp-field::before,
+#rsvp .rsvp-field::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 2) Make the icon truly centered */
 #rsvp .rsvp-field .rsvp-icon {
-  flex: 0 0 64px;            /* slot width */
   display: flex;
   align-items: center;
-  justify-content: center;   /* centers icon regardless of glyph size */
-  border-right: 1px solid #e6e6e6;
-  box-sizing: border-box;
+  justify-content: center;
 }
 
-/* Ensure the <i> itself doesn't introduce odd spacing */
+/* Force the glyph box to behave predictably */
 #rsvp .rsvp-field .rsvp-icon i {
+  display: block;
   line-height: 1;
 }
-
-/* Input area */
 #rsvp .rsvp-field input {
-  flex: 1 1 0;
-  min-width: 0;
-  width: auto !important;    /* overrides template width:100% if present */
-  box-sizing: border-box;
-
-  padding-left: 18px !important;  /* space after divider */
-}
-
-/* Submit button spacing */
-#rsvp .rsvp-btn {
-  margin-top: 20px !important;
-  display: block;
-  width: 100%;
+  box-shadow: none !important;
 }
 
 
