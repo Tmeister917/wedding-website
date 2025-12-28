@@ -369,8 +369,8 @@
 }
 
 /* =========================================================
-   RSVP: fix overlap after adding Allergies + Lodging fields
-   Scoped to #rsvp only (no global changes)
+   RSVP: fixes for added Allergies + Lodging fields
+   Scoped to #rsvp only
    ========================================================= */
 
 #rsvp .form-input-group {
@@ -379,8 +379,8 @@
 }
 
 #rsvp .rsvp-btn {
-  margin-top: 16px !important;   /* stops the button from riding up into inputs */
-  position: static !important;   /* cancels any positioning from template */
+  margin-top: 16px !important;
+  position: static !important;
   display: block;
   width: 100%;
 }
@@ -390,76 +390,50 @@
   margin-bottom: 0;
 }
 
-/* =========================================================
-   RSVP: fix icon + text alignment for the two new fields only
-   ========================================================= */
+/* ---------------------------------------------------------
+   New fields: icons (cutlery/bed) + divider alignment
+   --------------------------------------------------------- */
 
-/* Center icons vertically within their icon slot */
-/* RSVP: fix ONLY the two new icons + their divider height */
-#rsvp .form-input-group {
-  position: relative;
-}
-
-/* Target only the new icons */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
+/* Icon slot for ONLY the new icons */
+#rsvp i.fa-cutlery,
+#rsvp i.fa-bed {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;            /* makes the divider/bar span the full input height */
-  width: 60px;             /* icon slot width (matches the template look) */
+  height: 100%;
+  width: 60px;                 /* keep same as your current good look */
   display: flex;
-  align-items: center;     /* vertical centering */
-  justify-content: center; /* horizontal centering */
+  align-items: center;
+  justify-content: center;
   line-height: 1;
+
+  border-right: 0 !important;  /* remove built-in divider just for these */
 }
 
+/* Redraw the divider line shifted horizontally */
+#rsvp i.fa-cutlery::after,
+#rsvp i.fa-bed::after {
+  content: "";
+  position: absolute;
 
-/* Nudge ONLY the new fields' placeholder/text to match existing inputs */
+  /* match the “inset” height of dividers on other fields */
+  top: 14px;
+  bottom: 14px;
+
+  /* shift divider horizontally (tune this only) */
+  right: -8px;                 /* try -6 / -8 / -10 */
+
+  width: 1px;
+  background: #e6e6e6;
+  pointer-events: none;
+}
+
+/* Text alignment for ONLY the new inputs */
 #rsvp #allergies,
 #rsvp #lodging {
+  padding-left: 88px !important;   /* should match the divider shift */
   padding-top: 18px !important;
   padding-bottom: 18px !important;
   line-height: normal !important;
 }
-
-/* Shift ONLY the divider line for Allergies + Lodging a few px to the right */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
-  border-right: 0 !important;      /* remove the current divider line */
-  position: absolute;              /* keep your icon-slot positioning stable */
-}
-
-/* RSVP: shift ONLY the divider line for the two new fields HORIZONTALLY (keep vertical identical) */
-
-/* remove the built-in divider for just these two icons */
-#rsvp .fa-cutlery,
-#rsvp .fa-bed {
-  border-right: 0 !important;
-  position: absolute; /* keep your icon positioning as-is */
-}
-
-/* redraw divider with the same vertical inset as the original inputs */
-#rsvp .fa-cutlery::after,
-#rsvp .fa-bed::after {
-  content: "";
-  position: absolute;
-
-  /* vertical match: not full height, same “inset” look as other fields */
-  top: 14px;
-  bottom: 14px;
-
-  /* horizontal shift: move the divider right/left */
-  right: -8px;      /* <-- change this only: -6, -8, -10 etc */
-
-  width: 1px;
-  background: #e6e6e6;
-}
-
-/* keep text start aligned with the new divider position */
-#rsvp #allergies,
-#rsvp #lodging {
-  padding-left: 88px !important;  /* adjust to match right shift (usually +8px vs your old) */
-}
-
 
