@@ -418,7 +418,7 @@
 #rsvp .fa-cutlery,
 #rsvp .fa-bed {
   justify-content: flex-start;  /* instead of centered */
-  padding-left: 18px;           /* tune: 16px–22px if needed */
+  padding-left: 50px;           /* tune: 16px–22px if needed */
 }
 
 /* Nudge ONLY the new fields' placeholder/text to match existing inputs */
