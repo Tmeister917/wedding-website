@@ -452,60 +452,22 @@
 }
 
 
-/* =========================================================
-   Sticky nav (the bar that appears after scrolling)
-   Make background light + text black
-   Put this at the VERY BOTTOM of css/queries.css
-   ========================================================= */
+/* Desktop nav text should be black (both normal + sticky) */
+@media screen and (min-width: 992px) {
+  /* normal (non-sticky) */
+  .navigation header nav a,
+  .navigation header nav ul li a {
+    color: #000 !important;
+  }
 
-/* The template typically adds a class like "fixed" (sometimes on header, sometimes on .navigation) */
-header.fixed,
-.navigation.fixed header,
-header.sticky,
-.navigation.sticky header {
-  background: rgba(248, 246, 242, 0.96) !important;  /* light “whitish” */
+  /* sticky variants (covers common templates) */
+  .navigation header.fixed nav a,
+  .navigation header.sticky nav a,
+  .navigation.fixed header nav a,
+  .navigation.sticky header nav a {
+    color: #000 !important;
+  }
 }
 
-/* Sometimes the background is applied to an inner wrapper */
-header.fixed .header-content,
-.navigation.fixed header .header-content,
-header.sticky .header-content,
-.navigation.sticky header .header-content {
-  background: rgba(248, 246, 242, 0.96) !important;
-}
 
-/* Make all nav links black in the sticky state */
-header.fixed nav a,
-.navigation.fixed header nav a,
-header.sticky nav a,
-.navigation.sticky header nav a {
-  color: #000 !important;
-}
 
-/* If you have hover styles that turn links light again, force hover too */
-header.fixed nav a:hover,
-.navigation.fixed header nav a:hover,
-header.sticky nav a:hover,
-.navigation.sticky header nav a:hover {
-  color: #000 !important;
-}
-
-/* RSVP button (btn-white) usually needs its border/text adjusted on a light background */
-header.fixed nav a.btn-white,
-.navigation.fixed header nav a.btn-white,
-header.sticky nav a.btn-white,
-.navigation.sticky header nav a.btn-white {
-  color: #000 !important;
-  border-color: #000 !important;
-  background: transparent !important;
-}
-
-/* Hamburger icon often uses span + pseudo-elements; make it black when sticky */
-header.fixed .nav-toggle span,
-header.fixed .nav-toggle span:before,
-header.fixed .nav-toggle span:after,
-.navigation.fixed header .nav-toggle span,
-.navigation.fixed header .nav-toggle span:before,
-.navigation.fixed header .nav-toggle span:after {
-  background: #000 !important;
-}
