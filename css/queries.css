@@ -419,8 +419,6 @@
   display: none !important;
 }
 
-
-
 /* RSVP: remove the template's old divider line (drawn by i:after) */
 #rsvp .rsvp-form .form-input-group i:after,
 #rsvp .rsvp-form .form-input-group i::after {
@@ -429,25 +427,26 @@
   border: 0 !important;
 }
 
-/* RSVP: center icons consistently (Font Awesome fixed-width) */
+/* RSVP: center icons consistently */
 #rsvp .rsvp-icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#rsvp .rsvp-icon i.fa { display: block; line-height: 1; }
-
-/* RSVP: visually nudge most FA glyphs slightly left */
 #rsvp .rsvp-icon i.fa {
   display: block;
   line-height: 1;
+}
+
+/* RSVP: nudge the actual FA glyph (safe: won't shift vertically) */
+#rsvp .rsvp-icon i.fa::before {
   position: relative;
-  left: -2px; /* try -1px or -2px */
+  left: -2px;   /* tweak -1 / -2 / -3 */
 }
 
 /* Keep bed + cutlery centered (override the nudge) */
-#rsvp .rsvp-icon i.fa-cutlery,
-#rsvp .rsvp-icon i.fa-bed {
+#rsvp .rsvp-icon i.fa-bed::before,
+#rsvp .rsvp-icon i.fa-cutlery::before {
   left: 0;
 }
