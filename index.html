@@ -503,24 +503,16 @@
           <!-- Row 1: Email + Name -->
           <div class="row">
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <input type="email"
-                       name="email"
-                       id="email"
-                       placeholder="Email"
-                       required>
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-envelope"></i></span>
+                <input type="email" name="email" id="email" placeholder="Email" required>
               </div>
             </div>
 
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text"
-                       name="name"
-                       id="name"
-                       placeholder="Full name"
-                       required>
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-user"></i></span>
+                <input type="text" name="name" id="name" placeholder="Full name" required>
               </div>
             </div>
           </div>
@@ -528,24 +520,16 @@
           <!-- Row 2: Partner + Invite Code -->
           <div class="row">
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-users" aria-hidden="true"></i>
-                <input type="text"
-                       name="extras"
-                       id="extras"
-                       placeholder="Partner name (invite only)">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-users"></i></span>
+                <input type="text" name="extras" id="extras" placeholder="Partner name (invite only)">
               </div>
             </div>
 
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-key" aria-hidden="true"></i>
-                <input type="number"
-                       name="invite_code"
-                       id="invite_code"
-                       min="0"
-                       placeholder="Invite code"
-                       required>
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-key"></i></span>
+                <input type="number" name="invite_code" id="invite_code" min="0" placeholder="Invite code" required>
               </div>
             </div>
           </div>
@@ -553,22 +537,16 @@
           <!-- Row 3: Allergies + Lodging -->
           <div class="row">
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                <input type="text"
-                       name="allergies"
-                       id="allergies"
-                       placeholder="Allergies / dietary restrictions">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-cutlery"></i></span>
+                <input type="text" name="allergies" id="allergies" placeholder="Allergies / dietary restrictions">
               </div>
             </div>
 
             <div class="col-md-6 col-sm-6">
-              <div class="form-input-group">
-                <i class="fa fa-bed" aria-hidden="true"></i>
-                <input type="text"
-                       name="lodging"
-                       id="lodging"
-                       placeholder="Lodging (hotel / on-site / other)">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-bed"></i></span>
+                <input type="text" name="lodging" id="lodging" placeholder="Lodging (hotel / on-site / other)">
               </div>
             </div>
           </div>
@@ -578,10 +556,8 @@
             <div class="col-md-12" id="alert-wrapper"></div>
           </div>
 
-          <!-- Single Submit Button -->
-          <button type="submit" class="btn-fill rsvp-btn">
-            Submit RSVP
-          </button>
+          <!-- Submit Button -->
+          <button type="submit" class="btn-fill rsvp-btn">Submit RSVP</button>
 
         </form>
 
@@ -589,6 +565,7 @@
     </div>
   </div>
 </section>
+
 
 
 
