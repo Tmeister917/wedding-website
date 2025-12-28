@@ -391,49 +391,37 @@
 }
 
 /* ---------------------------------------------------------
-   New fields: icons (cutlery/bed) + divider alignment
+   New fields: keep icon slot consistent with template
    --------------------------------------------------------- */
 
-/* Icon slot for ONLY the new icons */
+/* Only the new icons need the "slot" behavior, but we DO NOT touch the divider.
+   We let the template's border/divider behave normally. */
 #rsvp i.fa-cutlery,
 #rsvp i.fa-bed {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  width: 60px;                 /* keep same as your current good look */
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-
-  border-right: 0 !important;  /* remove built-in divider just for these */
 }
 
-/* Redraw the divider line shifted horizontally */
-#rsvp i.fa-cutlery::after,
-#rsvp i.fa-bed::after {
-  content: "";
-  position: absolute;
-
-  /* match the “inset” height of dividers on other fields */
-  top: 14px;
-  bottom: 14px;
-
-  /* shift divider horizontally (tune this only) */
-  right: -8px;                 /* try -6 / -8 / -10 */
-
-  width: 1px;
-  background: #e6e6e6;
-  pointer-events: none;
+/* Fix the "divider cuts through icon" problem by shrinking ONLY the glyph,
+   not the slot/divider. Works with FA4/FA5 selectors. */
+#rsvp i.fa-cutlery:before,
+#rsvp i.fa-bed:before,
+#rsvp i.fa-cutlery::before,
+#rsvp i.fa-bed::before {
+  display: inline-block;
+  transform: scale(0.82);     /* tweak 0.78–0.90 if needed */
+  transform-origin: center;
 }
 
-/* Text alignment for ONLY the new inputs */
+/* Keep ONLY the vertical padding tweak (text was fine, start position was not) */
 #rsvp #allergies,
 #rsvp #lodging {
-  padding-left: 88px !important;   /* should match the divider shift */
   padding-top: 18px !important;
   padding-bottom: 18px !important;
-  line-height: normal !important;
 }
-
