@@ -423,5 +423,29 @@
   line-height: normal !important;
 }
 
+/* Shift ONLY the divider line for Allergies + Lodging a few px to the right */
+#rsvp .fa-cutlery,
+#rsvp .fa-bed {
+  border-right: 0 !important;      /* remove the current divider line */
+  position: absolute;              /* keep your icon-slot positioning stable */
+}
+
+/* draw the divider line slightly to the right of where it used to be */
+#rsvp .fa-cutlery::after,
+#rsvp .fa-bed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -8px;                     /* <-- tweak this: try -6px to -12px */
+  width: 1px;
+  background: #e6e6e6;             /* should match your existing divider */
+}
+
+/* keep the text starting after the shifted divider (add the same amount as above) */
+#rsvp #allergies,
+#rsvp #lodging {
+  padding-left: 88px !important;   /* <-- if your current looks perfect, this should match the shift */
+}
 
 
