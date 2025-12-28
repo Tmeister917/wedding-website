@@ -369,3 +369,21 @@
 }
 
 
+/* RSVP: stop submit button from overlapping the new 3rd row */
+#rsvp .form-input-group {
+  margin-bottom: 16px;
+}
+
+#rsvp .rsvp-btn {
+  margin-top: 20px !important; /* just adds breathing room below the last row */
+}
+
+/* RSVP: the divider is correct; the bed/cutlery glyphs are wide.
+   Nudge ONLY the glyph left so it doesn't touch the divider. */
+#rsvp i.fa-bed:before,
+#rsvp i.fa-cutlery:before {
+  position: relative;
+  left: -4px; /* tweak: -2px / -3px / -5px */
+}
+
+
