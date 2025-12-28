@@ -375,11 +375,12 @@
 
 #rsvp .form-input-group {
   margin-bottom: 16px;
+  position: relative;
 }
 
 #rsvp .rsvp-btn {
   margin-top: 16px !important;   /* stops the button from riding up into inputs */
-  position: static !important;   /* cancels any weird positioning from template */
+  position: static !important;   /* cancels any positioning from template */
   display: block;
   width: 100%;
 }
@@ -389,17 +390,24 @@
   margin-bottom: 0;
 }
 
-/* RSVP field alignment: center icons + vertically center placeholder/text */
+/* =========================================================
+   RSVP: fix icon + text alignment for the two new fields only
+   ========================================================= */
+
+/* Center icons vertically within their icon slot */
 #rsvp .form-input-group i {
-  height: 60px;
-  line-height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
 }
 
-#rsvp .form-input-group input {
-  height: 60px;
-  line-height: 60px;
-  padding-top: 0;
-  padding-bottom: 0;
+/* Nudge ONLY the new fields' placeholder/text to match existing inputs */
+#rsvp #allergies,
+#rsvp #lodging {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  line-height: normal !important;
 }
 
 
