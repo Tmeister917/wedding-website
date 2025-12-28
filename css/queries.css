@@ -412,3 +412,9 @@
   display: block;
   width: 100%;
 }
+
+/* RSVP: hide any legacy template icon that might still be rendering */
+#rsvp .form-input-group > i.fa {
+  display: none !important;
+}
+
