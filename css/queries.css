@@ -405,7 +405,7 @@
   min-width: 0;
   width: auto !important;
   box-sizing: border-box;
-  padding-left: 18px !important;s
+  padding-left: 18px !important;
 
   border-left: 0 !important; /* prevents an extra divider from the template */
 }
@@ -439,5 +439,10 @@
 #rsvp .rsvp-icon i.fa {
   display: block;
   line-height: 1;
+}
+/* RSVP: visually center FA glyphs (they're font-based, not true-centered) */
+#rsvp .rsvp-icon i.fa {
+  position: relative;
+  left: 1px;   /* try 1px, then 2px if needed */
 }
 
