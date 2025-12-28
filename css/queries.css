@@ -369,7 +369,7 @@
 }
 
 /* =========================================================
-   RSVP: fixes for added Allergies + Lodging fields
+   RSVP: stable layout + custom divider line (all fields)
    Scoped to #rsvp only
    ========================================================= */
 
@@ -391,35 +391,29 @@
 }
 
 /* ---------------------------------------------------------
-   New fields: keep icon slot consistent with template
+   Divider: REMOVE the template divider, DRAW our own
+   (applies to all RSVP fields uniformly)
    --------------------------------------------------------- */
 
-/* Only the new icons need the "slot" behavior, but we DO NOT touch the divider.
-   We let the template's border/divider behave normally. */
-#rsvp i.fa-cutlery,
-#rsvp i.fa-bed {
+/* Remove whatever divider the template is using */
+#rsvp .form-input-group i {
+  border-right: 0 !important;   /* most templates use this */
+  position: relative;           /* anchor ::after */
+}
+
+/* Draw a consistent divider, slightly to the right of the icon area */
+#rsvp .form-input-group i::after {
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 14px;                    /* inset like the “good” fields */
+  bottom: 14px;                 /* inset like the “good” fields */
+  right: -8px;                  /* horizontal shift (tweak -6 / -8 / -10) */
+  width: 1px;
+  background: #e6e6e6;
+  pointer-events: none;
 }
 
-/* Fix the "divider cuts through icon" problem by shrinking ONLY the glyph,
-   not the slot/divider. Works with FA4/FA5 selectors. */
-#rsvp i.fa-cutlery:before,
-#rsvp i.fa-bed:before,
-#rsvp i.fa-cutlery::before,
-#rsvp i.fa-bed::before {
-  display: inline-block;
-  transform: scale(0.82);     /* tweak 0.78–0.90 if needed */
-  transform-origin: center;
-}
-
-/* Keep ONLY the vertical padding tweak (text was fine, start position was not) */
+/* Keep your allergies/lodging vertical padding (this part was fine) */
 #rsvp #allergies,
 #rsvp #lodging {
   padding-top: 18px !important;
