@@ -451,19 +451,4 @@
   left: 0;
 }
 
-/* Always-visible (persistent) top nav */
-.navigation header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
-/* Keep your existing centered layout (like your 90% header rules) */
-.navigation header .header-content {
-  width: 90%;
-  margin: 0 auto;
-}
 
