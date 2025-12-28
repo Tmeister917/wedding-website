@@ -442,7 +442,7 @@
 /* RSVP: nudge the actual FA glyph (safe: won't shift vertically) */
 #rsvp .rsvp-icon i.fa::before {
   position: relative;
-  left: -6px;   /* tweak -1 / -2 / -3 */
+  left: -10px;   /* tweak -1 / -2 / -3 */
 }
 
 /* Keep bed + cutlery centered (override the nudge) */
