@@ -413,18 +413,6 @@
   width: 100%;
 }
 
-/* RSVP: hide any legacy template icon that might still be rendering */
-#rsvp .rsvp-field > i.fa {
-  display: none !important;
-}
 
-/* RSVP: kill the template's old pseudo-element divider (the "ghost line") */
-#rsvp .form-input-group:before,
-#rsvp .form-input-group:after,
-#rsvp .rsvp-field:before,
-#rsvp .rsvp-field:after {
-  content: none !important;
-  display: none !important;
-}
 
 
