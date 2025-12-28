@@ -1,3 +1,44 @@
+/* =========================
+   NAV: black text + bold everywhere
+   Sticky bar: light background when it appears
+   (Hover gold stays as-is; we do NOT redefine hover)
+   ========================= */
+
+/* Desktop (includes "unstuck" and normal top-of-page state) */
+@media screen and (min-width: 992px) {
+    .navigation header nav a,
+    .navigation header nav ul li a {
+        color: #000;
+        font-weight: 700;
+    }
+}
+
+/* Sticky state (covers common class patterns used by templates/JS) */
+header.fixed,
+header.sticky,
+.navigation.fixed header,
+.navigation.sticky header {
+    background-color: #f8f6f2; /* light-ish bar when it appears */
+}
+
+header.fixed .header-content,
+header.sticky .header-content,
+.navigation.fixed header .header-content,
+.navigation.sticky header .header-content {
+    background-color: #f8f6f2; /* in case the background is applied to the inner wrapper */
+}
+
+header.fixed nav a,
+header.sticky nav a,
+.navigation.fixed header nav a,
+.navigation.sticky header nav a {
+    color: #000;
+    font-weight: 700;
+}
+
+
+/* ===== Your original blocks, mostly unchanged ===== */
+
 @media screen and (max-width: 1200px) {
     header {
         width: 90%;
@@ -8,7 +49,6 @@
         display: inline-block;
         width: 70%;
     }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -30,7 +70,7 @@
 
     .header-nav {
         position: fixed;
-        background-color: #f8f6ft; /*change this*/
+        background-color: #f8f6f2; /* was #000 */
         width: 100%;
         height: 100%;
         top: 0;
@@ -65,18 +105,18 @@
     }
 
     nav ul li a {
-        color: #000;
+        color: #000;          /* was #fff */
         font-size: 25px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 700;     /* was 600 */
         -moz-transition: all 300ms ease-in-out;
         -o-transition: all 300ms ease-in-out;
         -webkit-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out
+        transition: all 300ms ease-in-out;
     }
 
     nav ul li {
-        margin-bottom: 25px
+        margin-bottom: 25px;
     }
 
     nav ul.primary-nav li {
@@ -121,10 +161,6 @@
         -o-transition: -o-transform 0.5s, opacity 0.5s;
         -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
         transition: transform 0.5s, opacity 0.5s;
-        -moz-transition: -moz-transform 0.5s, opacity 0.5s;
-        -o-transition: -o-transform 0.5s, opacity 0.5s;
-        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-        transition: transform 0.5s, opacity 0.5s
     }
 
     header .header-nav.open ul.primary-nav li,
@@ -136,50 +172,15 @@
         -ms-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0);
     }
 
-    nav ul.primary-nav li:first-child {
-        -moz-transition-delay: 0.05s;
-        -o-transition-delay: 0.05s;
-        -webkit-transition-delay: 0.05s;
-        transition-delay: 0.05s
-    }
-
-    nav ul.primary-nav li:nth-child(2) {
-        -moz-transition-delay: 0.1s;
-        -o-transition-delay: 0.1s;
-        -webkit-transition-delay: 0.1s;
-        transition-delay: 0.1s
-    }
-
-    nav ul.primary-nav li:nth-child(3) {
-        -moz-transition-delay: 0.15s;
-        -o-transition-delay: 0.15s;
-        -webkit-transition-delay: 0.15s;
-        transition-delay: 0.15s
-    }
-
-    nav ul.primary-nav li:nth-child(4) {
-        -moz-transition-delay: 0.2s;
-        -o-transition-delay: 0.2s;
-        -webkit-transition-delay: 0.2s;
-        transition-delay: 0.2s
-    }
-
-    nav ul.member-actions li:first-child {
-        -moz-transition-delay: 0.25s;
-        -o-transition-delay: 0.25s;
-        -webkit-transition-delay: 0.25s;
-        transition-delay: 0.25s
-    }
-
-    nav ul.member-actions li:nth-child(2) {
-        -moz-transition-delay: 0.30s;
-        -o-transition-delay: 0.30s;
-        -webkit-transition-delay: 0.30s;
-        transition-delay: 0.30s
-    }
+    nav ul.primary-nav li:first-child { transition-delay: 0.05s; }
+    nav ul.primary-nav li:nth-child(2) { transition-delay: 0.1s; }
+    nav ul.primary-nav li:nth-child(3) { transition-delay: 0.15s; }
+    nav ul.primary-nav li:nth-child(4) { transition-delay: 0.2s; }
+    nav ul.member-actions li:first-child { transition-delay: 0.25s; }
+    nav ul.member-actions li:nth-child(2) { transition-delay: 0.30s; }
 
     .intro-content {
         display: inline-block;
@@ -187,13 +188,9 @@
         margin-bottom: 30px;
     }
 
-    .last {
-        margin: 0;
-    }
+    .last { margin: 0; }
 
-    .features {
-        padding-bottom: 0;
-    }
+    .features { padding-bottom: 0; }
 
     .features .device-showcase,
     .features-extra .macbook-wrap {
@@ -212,9 +209,7 @@
         width: 100%;
     }
 
-    .hero-strip {
-        margin-top: 0;
-    }
+    .hero-strip { margin-top: 0; }
 
     .events .leftcol {
         padding: 0 15px;
@@ -225,37 +220,25 @@
     .events .rightcol {
         padding: 0 20px;
     }
-    
-    #eng-pics .img-wrap {
-        border-radius: 0;
-    }
 
-    #map-content-wrapper {
-        margin-bottom: 40px;
-    }
-    
+    #eng-pics .img-wrap { border-radius: 0; }
+
+    #map-content-wrapper { margin-bottom: 40px; }
+
     #map-content {
         margin-top: 0;
         padding: 35px;
     }
 
-    .rsvp {
-        padding-top: 40px;
-    }
+    .rsvp { padding-top: 40px; }
 
-    footer .social-share {
-        display: none;
-    }
+    footer .social-share { display: none; }
 
-    footer .footer-links {
-        margin: 120px 0 120px 0;
-    }
+    footer .footer-links { margin: 120px 0 120px 0; }
 }
 
 @media screen and (max-width: 640px) {
-    .hero .hero-content {
-        padding-top: 100%;
-    }
+    .hero .hero-content { padding-top: 100%; }
 
     #eng-pics .img-wrap i {
         font-size: 25px;
@@ -263,15 +246,12 @@
         width: 25px;
         height: 25px;
         top: 10px;
-        right: 10px; }
+        right: 10px;
+    }
 
-    #map-content-wrapper {
-        margin-bottom: 0;
-    }
-    
-    footer ul.footer-group {
-        border-top: none;
-    }
+    #map-content-wrapper { margin-bottom: 0; }
+
+    footer ul.footer-group { border-top: none; }
 
     footer ul.footer-group li a {
         font-size: 13px;
@@ -281,25 +261,15 @@
         border-bottom: dashed 1px #4E566C;
     }
 
-    footer ul.footer-group li {
-        display: block;
-    }
+    footer ul.footer-group li { display: block; }
 
-    footer .footer-links {
-        margin: 50px 0 50px 0;
-    }
-
+    footer .footer-links { margin: 50px 0 50px 0; }
 }
 
-
 @media screen and (max-width: 480px) {
-    .hero .hero-content {
-        padding-top: 110%;
-    }
-    
-    .hero .hero-content img {
-        width: 65%;
-    }
+    .hero .hero-content { padding-top: 110%; }
+
+    .hero .hero-content img { width: 65%; }
 
     .hero .btn {
         display: block;
@@ -307,17 +277,11 @@
         margin: 0 auto;
     }
 
-    .hero .btn:first-of-type {
-        margin-bottom: 20px;
-    }
+    .hero .btn:first-of-type { margin-bottom: 20px; }
 
-    .hero h1 {
-        font-size: 50px;
-    }
+    .hero h1 { font-size: 50px; }
 
-    .btn-margin-right {
-        margin-right: 0px;
-    }
+    .btn-margin-right { margin-right: 0px; }
 
     .features .device-showcase-left {
         position: absolute;
@@ -346,26 +310,15 @@
         background-size: 40%;
     }
 
-    .features {
-        padding-bottom: 0;
-    }
+    .features { padding-bottom: 0; }
 
-    .down-arrow {
-        display: none;
-    }
-
+    .down-arrow { display: none; }
 }
 
 @media screen and (max-width: 320px) {
-    .hero .hero-content {
-        padding-top: 130%;
-    }
+    .hero .hero-content { padding-top: 130%; }
 
-    .rsvp {
-        padding-top: 20px;
-    }
-    
-
+    .rsvp { padding-top: 20px; }
 }
 
 
