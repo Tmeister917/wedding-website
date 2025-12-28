@@ -395,12 +395,25 @@
    ========================================================= */
 
 /* Center icons vertically within their icon slot */
-#rsvp .form-input-group i {
+/* RSVP: fix ONLY the two new icons + their divider height */
+#rsvp .form-input-group {
+  position: relative;
+}
+
+/* Target only the new icons */
+#rsvp .fa-cutlery,
+#rsvp .fa-bed {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0;
+  top: 0;
+  height: 100%;            /* makes the divider/bar span the full input height */
+  width: 60px;             /* icon slot width (matches the template look) */
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
   line-height: 1;
 }
+
 
 /* Nudge ONLY the new fields' placeholder/text to match existing inputs */
 #rsvp #allergies,
