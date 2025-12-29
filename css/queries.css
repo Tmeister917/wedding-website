@@ -81,6 +81,16 @@ header.sticky nav a,
   font-weight: 700;
 }
 
+/* Restore gold hover/active (was in styles.min.css, but our black rule overrides it) */
+.navigation header nav a:hover,
+.navigation header nav ul.primary-nav li a:hover,
+.navigation header nav ul.member-actions li a:hover,
+.navigation header nav a:focus,
+.navigation header nav li.active > a {
+  color: #e8ca6f;
+}
+
+
 /* RSVP button: make it readable on the light background */
 .navigation header a.btn-white {
   color: #000;
