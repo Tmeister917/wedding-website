@@ -13,20 +13,18 @@
     }
 }
 
-/* Sticky state (covers common class patterns used by templates/JS) */
+/* Sticky state: do NOT paint a solid center background */
 header.fixed,
 header.sticky,
 .navigation.fixed header,
-.navigation.sticky header {
-    background-color: #f8f6f2; /* light-ish bar when it appears */
-}
-
+.navigation.sticky header,
 header.fixed .header-content,
 header.sticky .header-content,
 .navigation.fixed header .header-content,
 .navigation.sticky header .header-content {
-    background-color: #f8f6f2; /* in case the background is applied to the inner wrapper */
+  background: transparent;
 }
+
 
 header.fixed nav a,
 header.sticky nav a,
