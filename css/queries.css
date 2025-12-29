@@ -58,13 +58,13 @@ header.sticky nav a,
 
 /* Full-width nav background (fixes the “white only in the center” problem) */
 .navigation {
-  background: rgba(222, 227, 237, 0.90); /* adjust opacity here */
+  background: rgba(241, 243, 249, 0.90); /* adjust opacity here */
 }
 
 /* When sticky class is applied, keep the same full-width background */
 .navigation.fixed,
 .fixed.navigation {
-  background: rgba(222, 227, 237, 0.90);
+  background: rgba(241, 243, 249, 0.90);
 }
 
 /* IMPORTANT: don’t let the fixed-width header paint a different color */
