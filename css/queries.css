@@ -70,8 +70,10 @@ header.sticky nav a,
 /* IMPORTANT: don’t let the fixed-width header paint a different color */
 .navigation header {
   background: transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* replaces the old white-ish border */
+  border-bottom: none;
+  box-shadow: none;
 }
+
 
 /* Nav link color: black + bold (hover gold keeps working because it’s a :hover rule) */
 .navigation header a,
