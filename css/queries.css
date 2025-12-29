@@ -57,6 +57,47 @@ header.sticky nav a,
     }
 }
 
+
+/* Full-width nav background (fixes the “white only in the center” problem) */
+.navigation {
+  background: rgba(248, 246, 242, 0.96); /* adjust opacity here */
+}
+
+/* When sticky class is applied, keep the same full-width background */
+.navigation.fixed,
+.fixed.navigation {
+  background: rgba(248, 246, 242, 0.96);
+}
+
+/* IMPORTANT: don’t let the fixed-width header paint a different color */
+.navigation header {
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* replaces the old white-ish border */
+}
+
+/* Nav link color: black + bold (hover gold keeps working because it’s a :hover rule) */
+.navigation header a,
+.navigation header ul.primary-nav li a,
+.navigation header ul.member-actions li a {
+  color: #000;
+  font-weight: 700;
+}
+
+/* RSVP button: make it readable on the light background */
+.navigation header a.btn-white {
+  color: #000;
+  border-color: #000;
+}
+
+/* Mobile hamburger lines were white in the original CSS; make them black for light background */
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+  background: #000;
+}
+
+
+
 /* Responsive nav kicks in */
 @media screen and (max-width: 991px) {
     header {
