@@ -468,6 +468,11 @@ header.fixed a.btn-white:focus,
 }
 
 
+/* Nudge hero RSVP button up */
+.hero .rsvp-btn {
+  position: relative;
+  top: -12px;   /* tweak this */
+}
 
 
 
