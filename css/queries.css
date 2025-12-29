@@ -474,12 +474,12 @@ header.fixed a.btn-white:focus,
   top: -12px;   /* tweak this */
 }
 
-/* Hero bottom elements: shift RSVP + down arrow up a bit */
+/* If arrow/RSVP are absolutely positioned */
 .hero .rsvp-btn,
 .hero .down-arrow,
 .down-arrow {
-  position: relative;
-  top: -12px;   /* tweak: -8, -16, -24, etc */
+  bottom: 12px;  /* tweak */
 }
+
 
 
