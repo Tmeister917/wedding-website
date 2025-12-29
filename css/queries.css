@@ -471,7 +471,7 @@ header.fixed a.btn-white:focus,
 /* Nudge hero RSVP button up */
 .hero .rsvp-btn {
   position: relative;
-  top: -24px;   /* tweak this */
+  top: -22px;   /* tweak this */
 }
 
 /* If arrow/RSVP are absolutely positioned */
