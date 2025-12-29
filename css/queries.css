@@ -93,11 +93,23 @@ header.sticky nav a,
 }
 
 
-/* RSVP button: make it readable on the light background */
+/* RSVP button: restore gold border on hover (and keep it consistent in sticky too) */
 .navigation header a.btn-white {
-  color: #000;
   border-color: #000;
+  color: #000;
+  font-weight: 700;
 }
+
+.navigation header a.btn-white:hover,
+.navigation header a.btn-white:focus,
+header.fixed a.btn-white:hover,
+header.fixed a.btn-white:focus,
+.navigation.fixed header a.btn-white:hover,
+.navigation.fixed header a.btn-white:focus {
+  border-color: #e8ca6f;
+  color: #e8ca6f; /* if you only want border gold, remove this line */
+}
+
 
 /* Mobile hamburger lines were white in the original CSS; make them black for light background */
 .nav-toggle span,
