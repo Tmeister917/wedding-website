@@ -9,7 +9,7 @@
     .navigation header nav a,
     .navigation header nav ul li a {
         color: #000;
-        font-weight: 700;
+        font-weight: 650;
     }
 }
 
@@ -31,7 +31,7 @@ header.sticky nav a,
 .navigation.fixed header nav a,
 .navigation.sticky header nav a {
     color: #000;
-    font-weight: 700;
+    font-weight: 650;
 }
 
 
@@ -58,13 +58,13 @@ header.sticky nav a,
 
 /* Full-width nav background (fixes the “white only in the center” problem) */
 .navigation {
-  background: rgba(222, 227, 237, 0.95); /* adjust opacity here */
+  background: rgba(222, 227, 237, 0.90); /* adjust opacity here */
 }
 
 /* When sticky class is applied, keep the same full-width background */
 .navigation.fixed,
 .fixed.navigation {
-  background: rgba(222, 227, 237, 0.95);
+  background: rgba(222, 227, 237, 0.90);
 }
 
 /* IMPORTANT: don’t let the fixed-width header paint a different color */
@@ -80,7 +80,7 @@ header.sticky nav a,
 .navigation header ul.primary-nav li a,
 .navigation header ul.member-actions li a {
   color: #000;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 /* Restore gold hover/active (was in styles.min.css, but our black rule overrides it) */
@@ -97,7 +97,7 @@ header.sticky nav a,
 .navigation header a.btn-white {
   border-color: #000;
   color: #000;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .navigation header a.btn-white:hover,
@@ -171,7 +171,7 @@ header.fixed a.btn-white:focus,
         color: #000;          /* was #fff */
         font-size: 25px;
         text-transform: uppercase;
-        font-weight: 700;     /* was 600 */
+        font-weight: 650;     /* was 600 */
         -moz-transition: all 300ms ease-in-out;
         -o-transition: all 300ms ease-in-out;
         -webkit-transition: all 300ms ease-in-out;
