@@ -503,4 +503,24 @@ header.fixed a.btn-white:focus,
   box-shadow: none;
 }
 
+/* HERO logo: bigger + much higher */
+.hero .hero-content img.hero-logo{
+  display: block;
+  margin: 0 auto;
 
+  /* ~15% wider than 760px baseline (760 * 1.15 ≈ 874) */
+  width: 875px;
+  max-width: 95%;
+  height: auto;
+
+  position: relative;
+  top: -140px;   /* move up a good bit (try -140 to -220) */
+}
+
+/* Keep it reasonable on phones */
+@media screen and (max-width: 480px){
+  .hero .hero-content img.hero-logo{
+    width: 85% !important;
+    top: -60px;
+  }
+}
