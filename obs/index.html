@@ -80,6 +80,7 @@
 							</ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -159,15 +160,28 @@
         <div class="row">
             <!-- Left column -->
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-<div class="wp5">
-                    <p><strong>Friday · September 11</strong></p>
-                    <h5>Arrival at the Château <span class="time">From 3:00 PM</span></h5>
+
+                <div class="wp3">
+                    <p><strong>Before the wedding</strong></p>
+                    <h5>Welcome to Poitiers</h5>
                     <p>
-                        Guests are welcome to begin arriving at the château from 3:00 PM.
-                        Settle in, get comfortable, and join us for a relaxed evening together.
+                        We will be staying in Poitiers as guests begin to arrive.
+                        If you plan to arrive in town ahead of the wedding weekend,
+                        please join us for a relaxed and informal start to the celebrations.
+                        We would love to spend time together before heading to the château.
+                    </p>
+                </div>
+
+                <div class="wp5">
+                    <p><strong>Friday · September 11</strong></p>
+                    <h5>Arrival at the Château <span class="time">Afternoon</span></h5>
+                    <p>
+                        Transportation from Poitiers to the venue will be arranged for those who need it.
+                        We will arrive at the château in the afternoon, giving everyone time to settle in
+                        and enjoy the surroundings.
                     </p>
 
-                    <h5>Arrival Dinner</h5>
+                    <h5>Arrival Dinner <span class="time">19:30</span></h5>
                     <p>
                         A casual arrival dinner will be hosted at the château.
                         This evening is meant to be relaxed and convivial,
@@ -183,25 +197,25 @@
                 <div class="wp4">
                     <p><strong>Saturday · September 12</strong></p>
 
-                    <h5>Lunch at the Château</h5>
+                    <h5>Lunch at the Château <span class="time">12:30</span></h5>
                     <p>
                         A light lunch will be served at the château for guests staying on site,
                         providing a moment to relax before the afternoon celebrations begin.
                     </p>
 
-                    <h5>Wedding Ceremony</h5>
+                    <h5>Wedding Ceremony <span class="time">15:30</span></h5>
                     <p>
                         Our wedding ceremony will take place in the afternoon,
                         followed by time to celebrate together in the château grounds.
                     </p>
 
-                    <h5>Vin d'honneur</h5>
+                    <h5>Vin d'honneur <span class="time">17:00</span></h5>
                     <p>
                         Join us for drinks and small bites as we celebrate together
                         after the ceremony.
                     </p>
 
-                    <h5>Wedding Dinner</h5>
+                    <h5>Dîner de mariage <span class="time">19:30</span></h5>
                     <p>
                         The wedding dinner will follow in the evening,
                         with a long, joyful French-style dinner and celebration into the night.
@@ -211,10 +225,9 @@
                 <div class="wp6">
                     <p><strong>Sunday · September 13</strong></p>
 
-                    <h5>Farewell Breakfast</h5>
+                    <h5>Farewell Breakfast <span class="time">11:00</span></h5>
                     <p>
-                        Let’s wrap up the weekend with breakfast. A final chance to mingle,
-                        share a meal, and say goodbye before your next journey.
+                       Let’s wrap up the weekend with breakfast. A final chance to mingle, share a meal, and say goodbye before your next journey.
                     </p>
                 </div>
 
@@ -222,6 +235,7 @@
         </div>
     </div>
 </section>
+
 
 <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -232,25 +246,33 @@
 
                 <h3 class="text-center section-padding">Dress code</h3>
 
-                <h5>Friday & Sunday</h5>
+                <h5>Friday Arrival Dinner <span class="time">19:30</span></h5>
                 <p>
-                    <strong>Smart casual / business casual</strong>
+                    <strong>Smart casual</strong>
                     <br>
-                    Comfortable and polished. Please avoid sportswear and athletic wear.
+                    Please come dressed for a nice dinner, no sportswear, no shorts, no sneakers.
                 </p>
 
-                <h5>Saturday · Wedding Day</h5>
+                <h5>Saturday Ceremony, Cocktail Hour, and Dinner <span class="time">15:30 onward</span></h5>
                 <p>
                     <strong>Formal</strong>
                     <br>
-                    Suits, dresses, jumpsuits, and similar wedding attire are all appropriate.
-                    No need for black tie.
+                    This is the main event. Suits or jackets for men, cocktail dresses or equivalent for women.
+                    Dress shoes expected. Please make the effort and dress up.
+                </p>
+
+                <h5>Sunday Farewell Brunch <span class="time">11:00</span></h5>
+                <p>
+                    <strong>Relaxed but put together</strong>
+                    <br>
+                    Keep it comfortable, but still presentable. No pajamas, no athletic wear.
                 </p>
 
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+  
 
 <section id="eng-pics" class="section-padding">
     <div class="container-fluid">
@@ -385,7 +407,12 @@
                                 Lieu-dit La Borderie<br>
                                 16350 Benest, France
                             </p>
-<p>
+                            <p>
+                                <strong>From the US</strong><br>
+                                Fly into Paris, then take the TGV from Paris to Poitiers.<br>
+                                Transport to the venue on Friday September 11th will be arranged from Poitiers.
+                            </p>
+                            <p>
                                 <strong>Driving</strong><br>
                                 Use the address above in Google Maps (or your GPS).
                             </p>
@@ -426,26 +453,174 @@
 </section>
 
 
-<!-- Gifts -->
+<section class="rsvp text-center" id="rsvp">
+
+  <!-- RSVP Success Modal -->
+  <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog"
+       aria-labelledby="rsvp-modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="section-padding">
+            <h3 id="rsvp-modal-title">Thank you!</h3>
+            <p>We can’t wait to celebrate with you.</p>
+            <div id="add-to-cal"></div>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <h3>RSVP</h3>
+        <p>Please reply by <strong>April 1st, 2026</strong>.</p>
+
+        <form id="rsvp-form" class="rsvp-form" action="" method="POST" autocomplete="on">
+
+          <!-- Row 1: Email + Name -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-envelope fa-fw"  ></i></span>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-user fa-fw"></i></span>
+                <input type="text" name="name" id="name" placeholder="Full name" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Partner + Invite Code -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-users fa-fw"></i></span>
+                <input type="text" name="extras" id="extras" placeholder="Partner name (invite only)">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-key fa-fw"></i></span>
+                <input type="number" name="invite_code" id="invite_code" min="0" placeholder="Invite code" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Allergies + Lodging -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-cutlery fa-fw"></i></span>
+                <input type="text" name="allergies" id="allergies" placeholder="Allergies / dietary restrictions">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="form-input-group rsvp-field">
+                <span class="rsvp-icon" aria-hidden="true"><i class="fa fa-bed fa-fw"></i></span>
+                <select name="lodging" id="lodging">
+					<option value="" selected disabled>Lodging needed? (Yes/No)</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerts -->
+          <div class="row">
+            <div class="col-md-12" id="alert-wrapper"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-fill rsvp-btn">Submit RSVP</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</section> <!-- end RSVP -->
+
+<!-- Gifts (low-key) -->
 <section id="gifts" class="section-padding">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <h3 class="header">Gifts</h3>
         <p>
-          Your presence is more than enough. If you would still like to contribute,
-          we’ve created a honeymoon fund for our trip to Crete.
+          Your presence is the greatest gift. We’ll be traveling and won’t be able to bring home
+          large gifts or items.<br>
+          If you’d like to contribute, a small card or a contribution
+          toward our travels is more than enough.
         </p>
 
-        <a href="https://withjoy.com/theo-and-epiphanie/registry"
+        <a href="#"
            class="btn btn-fill btn-small"
-           target="_blank" rel="noopener">
-          Honeymoon Registry
+           data-toggle="modal"
+           data-target="#gifts-modal">
+          Contribute
         </a>
       </div>
     </div>
   </div>
 </section>
+
+<div id="gifts-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="text-center section-padding">Wedding Fund</h3>
+
+        <p class="text-center">
+          Your presence is more than enough. If you would still like to contribute,
+          you may do so using one of the options below.
+        </p>
+
+        <hr>
+
+        <p>
+          <strong>PayPal</strong><br>
+          <a href="https://paypal.me/theobrunel92"
+             target="_blank" rel="noopener">
+            Epiphanie and Théo's Honeymoon Fund
+          </a>
+        </p>
+
+        <p>
+          <strong>Venmo (US)</strong><br>
+          <a href="https://venmo.com/TheoBrunel"
+             target="_blank" rel="noopener">
+            venmo.com/EpiphanieAndTheo
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer>
 
 
 <footer>
